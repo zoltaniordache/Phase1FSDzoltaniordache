@@ -1,0 +1,30 @@
+import java.io.File;
+import java.io.IOException;
+
+public class FileActions {
+
+
+	public static void CreateNewFile(String fileName)  throws IOException
+	{
+		 	File file = new File(fileName);
+		    boolean isFileCreated = file.createNewFile();  // New change
+		    if(isFileCreated==true) {
+			    System.out.print("File was created ");	
+		    }
+		    else {
+		    System.out.println("File was not created ");
+		    }
+	}
+	public static void DeleteExistingFile(String fileName) {
+		
+	File fileToBeDeleted = new File(System.getProperty("user.dir")+"\"+fileName);
+	System.out.println("Deleted the file: " + fileToBeDeleted.getName());
+        if (fileToBeDeleted.delete()) {
+            System.out.println("Deleted the file: " + fileToBeDeleted.getName());
+        } else {
+            System.out.println("Failed to delete the file.");
+        }
+
+	}
+}
+

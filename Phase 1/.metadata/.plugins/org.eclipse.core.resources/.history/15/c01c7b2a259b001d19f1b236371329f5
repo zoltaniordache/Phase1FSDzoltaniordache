@@ -1,0 +1,47 @@
+		import java.util.Scanner;
+public class main {
+
+	public static void main(String[] args) {
+		// decLaring variables here
+		int n;
+		System.out.println("Files overview application\nVersion 1.0.0\nDeveloped by Zoltan Iordache\nWelcome to Lockers Pvt. Ltd' application. ");
+
+		
+		
+		
+		// creating scanner obiect here
+		Scanner sc = new Scanner(System.in);
+		// running infinite loop
+		boolean loop = true;
+		do {
+		// Displaying the set of quiz options
+		System.out.println("Please choose one option from the bellow list: ");
+		System.out.println("1. Show all the files in ascending order\n2. Files related actions\n3. Exist program");
+		// reading input from user
+		System.out.println("Enter your choice(1/2/3/4/5)? ");
+		n = sc.nextInt();
+		
+		switch (n) {
+		  case 1:
+		    System.out.println("Show all the files in ascending order");
+		  case 2:
+			  System.out.println("Please choose one of the following action");
+			  System.out.println("1. Create a new file \n2. Delete an existing file \n3. Search for an existing file");
+			  n = sc.nextInt();
+			break; 
+			  
+		    
+		    
+		    
+
+		  
+		  case 3:
+		    System.out.println("Exit program");
+		    break;
+		}
+		}while(loop = true);
+			
+		}
+
+
+}

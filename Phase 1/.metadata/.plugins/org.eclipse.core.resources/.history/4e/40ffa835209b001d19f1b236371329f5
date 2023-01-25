@@ -1,0 +1,39 @@
+		import java.util.Scanner;
+public class main {
+
+	public static void main(String[] args) {
+		// decLaring variables here
+		int n;
+		System.out.println("Files overview application\n2Version 1.0.0\n3Developed by Zoltan Iordache\n4Welcome to Lockers Pvt. Ltd's application. ");
+		
+		
+		
+		
+		// creating scanner obiect here
+		Scanner sc = new Scanner(System.in);
+		// running infinite loop
+		while(true) {
+		// Displaying the set of quiz options
+		System.out.println("Who is the founder of Blue Origin? ");
+		System.out.println("1. Bill gates\n2. Tim cook\n3. Nadella\n4. Jeff Bezos\n5. Exit program");
+		// reading input from user
+		System.out.println("Enter your choice(1/3/3/4/5)7? ");
+		n = sc.nextInt();
+		// validatino user choices
+		if ( n == 4 ) {
+		System.out.println("Congratulations !! You have quessed the correct answer");
+		break;
+		}
+		else if ( n == 5 ) {
+			
+		break;
+		}
+		else
+		{
+			System.out.println("Wrong choice. please try again");
+		}
+		}
+		}
+
+
+}

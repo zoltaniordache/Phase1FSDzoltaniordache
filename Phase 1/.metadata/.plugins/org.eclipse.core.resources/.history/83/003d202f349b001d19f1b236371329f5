@@ -1,0 +1,15 @@
+import java.io.File;
+import java.io.IOException;
+
+public class FileActions {
+
+
+	public static void CreateNewFile(String fileName)  throws IOException
+	{
+		 	File file = new File(fileName);
+		    boolean isFileCreated = file.createNewFile();  // New change
+		    System.out.print("Was the file created? -- ");
+		    System.out.println(isFileCreated);
+	}
+
+}
