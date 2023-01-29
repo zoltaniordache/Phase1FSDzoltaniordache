@@ -41,7 +41,7 @@ public class FileActions {
 	}
 	public static void SearchFile(String fileName,File file) {
 		
-	String printMessage = "File not found in the following folder" +  file.getPath();
+	String printMessage = "File not found in the following folder" +  file.getParentFile();
 	
 	File[] list = file.listFiles();
     if(list!=null)
@@ -53,7 +53,7 @@ public class FileActions {
         }
         else if (fileName.equals(fil.getName()))
         {
-        	printMessage = "File was found in the following path "+fil.getParentFile();
+        	printMessage = "Path to the file is "+fil.getParentFile();
             break;
         }
         

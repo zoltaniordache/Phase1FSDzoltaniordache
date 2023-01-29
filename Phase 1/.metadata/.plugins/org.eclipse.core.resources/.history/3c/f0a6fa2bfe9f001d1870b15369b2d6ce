@@ -145,12 +145,6 @@ public class main {
 						  System.out.println("\n");
 
 					  }
-					if(inputChoice1==4)
-					 {	System.out.println("Going to main menu!");
-					 	mainUserChoice=0;
-					 	break;
-					 	
-					 }
 					else {
 						 System.out.println("ERROR: Invalid Selection");
 					}

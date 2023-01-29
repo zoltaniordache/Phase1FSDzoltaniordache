@@ -138,19 +138,13 @@ public class main {
 							  Scanner scannerFileName = new Scanner(System.in);
 							  String fileName = scannerFileName.next();
 							  File directory = new File(System.getProperty("user.dir"));
-							  FileActions.SearchFile(fileName, directory);
+							  int found = FileActions.SearchFile(fileName, directory);
 							  inputChoice1=0;//keep application in File related actions submenu
 						  }
 					if(inputChoice1==0){
 						  System.out.println("\n");
 
 					  }
-					if(inputChoice1==4)
-					 {	System.out.println("Going to main menu!");
-					 	mainUserChoice=0;
-					 	break;
-					 	
-					 }
 					else {
 						 System.out.println("ERROR: Invalid Selection");
 					}

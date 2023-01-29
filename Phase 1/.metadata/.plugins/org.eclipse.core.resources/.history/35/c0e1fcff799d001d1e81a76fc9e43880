@@ -24,7 +24,7 @@ public class FileActions {
 	public static void DeleteExistingFile(String fileName) {
 		
 	File fileToBeDeleted = new File(System.getProperty("user.dir")+"/"+fileName);
-	//System.out.println(fileToBeDeleted.canWrite());
+	System.out.println(fileToBeDeleted.canWrite());
 	//System.out.println(System.getProperty("user.dir"));
 	 if(fileToBeDeleted.exists()) {
 		 	if (fileToBeDeleted.delete()) {
@@ -41,24 +41,22 @@ public class FileActions {
 	}
 	public static void SearchFile(String fileName,File file) {
 		
-	String printMessage = "File not found in the following folder" +  file.getPath();
+	
 	
 	File[] list = file.listFiles();
     if(list!=null)
-    for (File fil  : list)
+    for (File fil : list)
     {
         if (fil.isDirectory())
         {
         	SearchFile(fileName,fil);
         }
-        else if (fileName.equals(fil.getName()))
+        else if (fileName.equalsIgnoreCase(fil.getName()))
         {
-        	printMessage = "File was found in the following path "+fil.getParentFile();
-            break;
+            System.out.println(fil.getParentFile());
         }
-        
     }
-    System.out.println(printMessage);
-    }
+
+	}
 }
 

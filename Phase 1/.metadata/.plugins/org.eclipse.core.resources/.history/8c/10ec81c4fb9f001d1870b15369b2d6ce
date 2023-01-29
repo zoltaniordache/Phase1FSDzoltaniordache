@@ -41,24 +41,25 @@ public class FileActions {
 	}
 	public static void SearchFile(String fileName,File file) {
 		
-	String printMessage = "File not found in the following folder" +  file.getPath();
+	
 	
 	File[] list = file.listFiles();
     if(list!=null)
-    for (File fil  : list)
+    for (File fil : list)
     {
         if (fil.isDirectory())
         {
         	SearchFile(fileName,fil);
         }
-        else if (fileName.equals(fil.getName()))
+        else if (fileName.equalsIgnoreCase(fil.getName()))
         {
-        	printMessage = "File was found in the following path "+fil.getParentFile();
-            break;
+            System.out.println("Path to the file is "+fil.getParentFile());
         }
-        
+    
+   
+    	System.out.println("Not the same as " + fil.getName());
+    
     }
-    System.out.println(printMessage);
     }
 }
 
